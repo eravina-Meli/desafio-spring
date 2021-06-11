@@ -1,0 +1,47 @@
+[
+  {
+    "userId": 1111,
+    "userName": "Jonathan",
+    "whatIs": "SELLER"
+  },
+  {
+    "userId": 2222,
+    "userName": "Gonzalo",
+    "whatIs": "SELLER"
+  },
+  {
+    "userId": 3333,
+    "userName": "Nicolás",
+    "whatIs": "SELLER"
+  },
+  {
+    "userId": 4444,
+    "userName": "Pablo",
+    "whatIs": "SELLER"
+  },
+  {
+    "userId": 5555,
+    "userName": "Hernán",
+    "whatIs": "BUY"
+  },
+  {
+    "userId": 6666,
+    "userName": "Pedro",
+    "whatIs": "BUY"
+  },
+  {
+    "userId": 7777,
+    "userName": "Toto",
+    "whatIs": "BUY"
+  },
+  {
+    "userId": 8888,
+    "userName": "Lucio",
+    "whatIs": "BUY"
+  },
+  {
+    "userId": 9999,
+    "userName": "Diego",
+    "whatIs": "BUY"
+  }
+]
