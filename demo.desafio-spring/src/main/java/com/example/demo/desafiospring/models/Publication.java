@@ -18,4 +18,6 @@ public class Publication {
     private Product detail;
     private int category;
     private double price;
+    private boolean hasPromo;
+    private double discount;
 }

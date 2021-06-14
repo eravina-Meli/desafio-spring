@@ -187,17 +187,20 @@ public class RepositoryUserImpl implements IRepositoryUser {
         userFollowersListResponseDTO.setUserId(user.getUserId());
         userFollowersListResponseDTO.setUserName(user.getUserName());
 
-        UserResponseDTO userResponseDTO = null;
+        UserResponseDTO userResponseDTO;
+        Users isSellerOrBuy;
 
         //Recorremos la lista de usuários, los cuales 1 usuario sigue, lo cargamos a la lista y lo retornamos
         for (Map.Entry<Integer, List<Users>> entry : this.mapListUsers.entrySet()){
-            if(entry.getKey() == user.getUserId()){
-                for (Users u : entry.getValue()){
-                    userResponseDTO = new UserResponseDTO(u.getUserId(),u.getUserName());
+            for (Users u : entry.getValue()){
+                if(u.getUserId() == user.getUserId()){
+                    isSellerOrBuy = isSellerOrBuy(entry.getKey());
+                    userResponseDTO = new UserResponseDTO(isSellerOrBuy.getUserId(),isSellerOrBuy.getUserName());
                     userFollowersListResponseDTO.addUserListDTO(userResponseDTO);
                 }
             }
         }
+
         //Ordenamos de forma ascendente o descendente, depndiendo de qué nos viene por parámetro (name)
         List<UserResponseDTO> getFollowersDTO = userFollowersListResponseDTO.getFollowers();
         if(name.equals("name_asc")) {
